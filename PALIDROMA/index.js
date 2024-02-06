@@ -5,7 +5,11 @@ Creare una funzione per capire se la parola inserita è palindroma
 (ad esempio, questa funzione potrebbe funzionare così: passandole la parola come parametro, farà i suoi calcoli per capire se è palindroma o meno e ci restituirà true o false in base all'esito)
 */
 
- let parola = "andy" /*madam, */
+let parolaOutput = document.querySelector("#word")
+let risposta = document.querySelector("#answer")
+
+
+ let parola = prompt("inserici una parola")
 
  let array1 =[]
  let array2 =[]
@@ -34,9 +38,9 @@ for(let i =0 ;i<x.length;i++){
   
   for(let m= 0; m<x.length ; m++){
   if(array1[m] === array2[m]){
-    return true
+    return "vero"
   }else{
-return false
+return "falso"
 
   }
 
@@ -44,4 +48,10 @@ return false
 
 }
 
-console.log(palidroma(parola))
+let risultato = palidroma(parola)
+
+
+
+ parolaOutput.innerHTML= parola
+ risposta.innerHTML = risultato
+
