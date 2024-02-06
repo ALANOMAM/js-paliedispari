@@ -8,8 +8,10 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Se l'utente ha indovinato l'esito (pari o dispari) della somma ha vinto, altrimenti ha perso.
 */
 
+let sceltaUser = "pari"
 let numeroUser = 3; /*test*/
-console.log("user",numeroUser)
+console.log("scelta utente : ",sceltaUser)
+console.log("user number : ",numeroUser)
 
 function pcRandom(){
  let random = Math.floor((Math.random()*5)+1)
@@ -17,7 +19,7 @@ function pcRandom(){
 }
 
 let numeroComputer = pcRandom()
-console.log("random pc",numeroComputer)
+console.log("random pc : ",numeroComputer)
 
 
 
@@ -32,5 +34,10 @@ function pariODispari(a,b){
 }
 
 let risultato = pariODispari(numeroUser,numeroComputer) 
-
 console.log("risultato : ",risultato)
+
+if(risultato === sceltaUser){
+    console.log("hai vinto")
+} else{
+    console.log("hai perso")
+}
