@@ -18,36 +18,44 @@ let conslusione = document.querySelector("#conclusion")
 let sceltaUser = prompt("scegli pari o dispari")
 let numeroUser = Number(prompt("inserisci un numero tra 1 e 5"))
 
+ if(numeroUser >= 1 && numeroUser <= 5){
 
-function pcRandom(){
- let random = Math.floor((Math.random()*5)+1)
- return random
-}
+    function pcRandom(){
+        let random = Math.floor((Math.random()*5)+1)
+        return random
+       }
+       
+       let numeroComputer = pcRandom()
+       
+       
+       
+       function pariODispari(a,b){
+           
+           if((a+b) % 2 == 0){
+              return "pari"
+           }else{
+               return "dispari"
+           }
+       
+       }
+       
+       let risultato = pariODispari(numeroUser,numeroComputer) 
+       
+       
+       if(risultato === sceltaUser){
+           conslusione.innerHTML= "<b style='color:green'>hai vinto</b>"
+       } else{
+           conslusione.innerHTML= "<b style='color:red'>hai perso</b>"
+       }
+       
+        userOutput.innerHTML= numeroUser
+        pcOutput.innerHTML= numeroComputer
+        somma.innerHTML= risultato
 
-let numeroComputer = pcRandom()
 
 
+ }else{
+    alert('devi inserire un numero tra 1 e 5, ripropva')
+ }
 
-function pariODispari(a,b){
-    
-    if((a+b) % 2 == 0){
-       return "pari"
-    }else{
-        return "dispari"
-    }
-
-}
-
-let risultato = pariODispari(numeroUser,numeroComputer) 
-
-
-if(risultato === sceltaUser){
-    conslusione.innerHTML= "<b style='color:green'>hai vinto</b>"
-} else{
-    conslusione.innerHTML= "<b style='color:red'>hai perso</b>"
-}
-
- userOutput.innerHTML= numeroUser
- pcOutput.innerHTML= numeroComputer
- somma.innerHTML= risultato
 
