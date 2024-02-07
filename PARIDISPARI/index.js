@@ -28,7 +28,8 @@ let numeroUser = Number(prompt("inserisci un numero tra 1 e 5"))
        let numeroComputer = pcRandom()
        
        
-       
+      // una funzione può avere più di un return SOLO se tra if
+      // altrimenti ne prende solo uno.  
        function pariODispari(a,b){
            
            if((a+b) % 2 == 0){
